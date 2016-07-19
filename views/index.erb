@@ -1,10 +1,19 @@
 <div class="container">
   <% if @surveys.any?() %>
-    <div class="collection frame">
+  <div class="row center white z-depth-1 frame">
+    <h3 class="col s12 grey-text text-darken-3">SURVEYS</h3>
+    <ul class="collection">
       <% @surveys.each() do |survey| %>
-        <a href="/surveys/<%= survey.id() %>" class="collection-item"><%= survey.title() %></a>
+      <li class="collection-item">
+        <a class="red-text lighten-3 survey-titles" href="/surveys/<%= survey.id() %>" ><%= survey.title() %></a>
+        <form class="secondary-content" action="/surveys/<%= survey.id() %>" method="post">
+          <input name="_method" type="hidden" value="delete">
+          <button class="delete-button" type="submit"><i class="material-icons">delete</i></button>
+        </form>
+      </li>
       <% end %>
-    </div>
+    </ul>
+  </div>
   <% else %>
     <div class="row center white z-depth-1 frame">
       <h3 class="col s12 grey-text text-darken-3">THERE ARE NO SURVEYS</h3>

@@ -1,0 +1,105 @@
+<div class="container">
+  <div class="row center white z-depth-1 frame">
+    <h3 class="col s12 grey-text text-darken-3"><%= @survey.title() %></h3>
+    <form class="col s12" action="/surveys" method="post">
+      <div class="row">
+        <div class="input-field col s6 offset-s3">
+          <input type="text" name="title" id="title" class="validate">
+          <label for="title">Title</label>
+        </div>
+      </div>
+      <div id="q1">
+        <br>
+        <h5 class="teal-text lighten-2">QUESTION 1</h5>
+        <div class="row">
+          <div class="input-field col s12">
+            <input type="text" name="q_1" id="q_1">
+            <label for="q_1">Question</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input type="text" name="pa1_1" id="pa1_1">
+            <label for="pa1_1">Answer "A"</label>
+          </div>
+          <div class="input-field col s6">
+            <input type="text" name="pa2_1" id="pa2_1">
+            <label for="pa2_1">Answer "B"</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input type="text" name="pa3_1" id="pa3_1">
+            <label for="pa3_1">Answer "C"</label>
+          </div>
+          <div class="input-field col s6">
+            <input type="text" name="pa4_1" id="pa4_1">
+            <label for="pa4_1">Answer "D"</label>
+          </div>
+        </div>
+      </div>
+      <div id="q2">
+        <br><br>
+        <h5 class="teal-text lighten-2">QUESTION 2</h5>
+        <div class="row">
+          <div class="input-field col s12">
+            <input type="text" name="q_2" id="q_2">
+            <label for="q_2">Question</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input type="text" name="pa1_2" id="pa1_2">
+            <label for="pa1_2">Answer "A"</label>
+          </div>
+          <div class="input-field col s6">
+            <input type="text" name="pa2_2" id="pa2_2">
+            <label for="pa2_2">Answer "B"</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input type="text" name="pa3_2" id="pa3_2">
+            <label for="pa3_2">Answer "C"</label>
+          </div>
+          <div class="input-field col s6">
+            <input type="text" name="pa4_2" id="pa4_2">
+            <label for="pa4_2">Answer "D"</label>
+          </div>
+        </div>
+      </div>
+      <div id="q3">
+        <br><br>
+        <h5 class="teal-text lighten-2">QUESTION 3</h5>
+        <div class="row">
+          <div class="input-field col s12">
+            <input type="text" name="q_3" id="q_3">
+            <label for="q_3">Question</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input type="text" name="pa1_3" id="pa1_3">
+            <label for="pa1_3">Answer "A"</label>
+          </div>
+          <div class="input-field col s6">
+            <input type="text" name="pa2_3" id="pa2_3">
+            <label for="pa2_3">Answer "B"</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input type="text" name="pa3_3" id="pa3_3">
+            <label for="pa3_3">Answer "C"</label>
+          </div>
+          <div class="input-field col s6">
+            <input type="text" name="pa4_3" id="pa4_3">
+            <label for="pa4_3">Answer "D"</label>
+          </div>
+        </div>
+      </div>
+      <button class="btn red lighten-2 waves-effect waves-light" type="button" id="add-question">Add a question</button>
+      <button class="btn waves-effect waves-light" type="submit" name="action">Submit<i class="material-icons right">send</i></button>
+    </form>
+  </div>
+</div>
