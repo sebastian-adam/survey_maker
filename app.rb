@@ -93,22 +93,26 @@ patch('/surveys/:id') do
     @question.update({q: question, pa1: answer1, pa2: answer2, pa3: answer3, pa4: answer4, survey_id: @survey.id()})
   end
 
-  question = params['21']
-  answer1 = params['5']
-  answer2 = params['6']
-  answer3 = params['7']
-  answer4 = params['8']
-  if question != ""
-    @question2.update({q: question, pa1: answer1, pa2: answer2, pa3: answer3, pa4: answer4, survey_id: @survey.id()})
+  if @question2 != nil
+    question = params['21']
+    answer1 = params['5']
+    answer2 = params['6']
+    answer3 = params['7']
+    answer4 = params['8']
+    if question != ""
+      @question2.update({q: question, pa1: answer1, pa2: answer2, pa3: answer3, pa4: answer4, survey_id: @survey.id()})
+    end
   end
 
-  question = params['22']
-  answer1 = params['9']
-  answer2 = params['10']
-  answer3 = params['11']
-  answer4 = params['12']
-  if question != ""
-    @question3.update({q: question, pa1: answer1, pa2: answer2, pa3: answer3, pa4: answer4, survey_id: @survey.id()})
+  if @question3 != nil
+    question = params['22']
+    answer1 = params['9']
+    answer2 = params['10']
+    answer3 = params['11']
+    answer4 = params['12']
+    if question != ""
+      @question3.update({q: question, pa1: answer1, pa2: answer2, pa3: answer3, pa4: answer4, survey_id: @survey.id()})
+    end
   end
   @surveys = Survey.all()
   Question.order('id ASC')
