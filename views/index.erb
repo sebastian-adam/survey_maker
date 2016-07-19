@@ -10,6 +10,7 @@
           <input name="_method" type="hidden" value="delete">
           <button class="delete-button" type="submit"><i class="material-icons">delete</i></button>
         </form>
+        <a class="secondary-content" href="/surveys/<%= survey.id() %>/edit"><button class="edit_button" type="submit"><i class="material-icons">mode_edit</i></button></a>
       </li>
       <% end %>
     </ul>

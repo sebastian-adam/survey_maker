@@ -17,13 +17,13 @@ h3,h5 {
   display: none;
 }
 
-.delete-button {
+.delete-button, .edit_button {
   background-color: inherit;
   border: none;
 }
 
 .survey-titles {
-  margin-left: 43px;
+  margin-left: 85px;
 }
 
 .collection-item:hover {

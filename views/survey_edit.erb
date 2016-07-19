@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row white z-depth-1 frame">
+    <h3 class="col s12 grey-text text-darken-3 center">EDIT "<%= @survey.title() %>"</h3>
+    <form class="col s12" action="/surveys/<%= @survey.id() %>" method="post">
+      <input type="hidden" name="_method" value="patch">
+      <div class="row">
+        <div class="input-field col s6 offset-s3">
+          <input type="text" name="title" id="title" class="validate" value="<%= @survey.title() %>">
+          <label for="title">Title</label>
+        </div>
+      </div>
+      <% @counter = 1 %>
+      <% @q_counter = 20 %>
+      <% @questions.each() do |question| %>
+        <div>
+          <br>
+          <h5 class="teal-text lighten-2">QUESTION</h5>
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" name="<%= @q_counter %>" id="<%= @q_counter %>" value="<%= question.q() %>">
+              <label for="<%= question.id() %>">Question</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input type="text" name="<%= @counter %>" id="<%= @counter %>" value="<%= question.pa1() %>">
+              <label for="<%= @counter %>">Answer "A"</label>
+            </div>
+            <div class="input-field col s6">
+              <input type="text" name="<%= @counter.+(1) %>" id="<%= @counter.+(1) %>" value="<%= question.pa2() %>">
+              <label for="<%= @counter.+(1) %>">Answer "B"</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input type="text" name="<%= @counter.+(2) %>" id="<%= @counter.+(2) %>" value="<%= question.pa3() %>">
+              <label for="<%= @counter.+(2) %>">Answer "C"</label>
+            </div>
+            <div class="input-field col s6">
+              <input type="text" name="<%= @counter.+(3) %>" id="<%= @counter.+(3) %>" value="<%= question.pa4() %>">
+              <label for="<%= @counter.+(3) %>">Answer "D"</label>
+            </div>
+          </div>
+        </div>
+        <% @counter = @counter.+(4) %>
+        <% @q_counter = @q_counter.+(1) %>
+      <% end %>
+      <button class="btn waves-effect waves-light" type="submit" name="action">Edit<i class="material-icons right">send</i></button>
+    </form>
+  </div>
+</div>
