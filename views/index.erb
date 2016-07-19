@@ -1,0 +1,14 @@
+<div class="container">
+  <% if @surveys.any?() %>
+    <div class="collection frame">
+      <% @surveys.each() do |survey| %>
+        <a href="/surveys/<%= survey.id() %>" class="collection-item"><%= survey.title() %></a>
+      <% end %>
+    </div>
+  <% else %>
+    <div class="row center white z-depth-1 frame">
+      <h3 class="col s12 grey-text text-darken-3">THERE ARE NO SURVEYS</h3>
+      <a href="/surveys/new" class="waves-effect waves-light btn">Add one</a>
+    </div>
+  <% end %>
+</div>

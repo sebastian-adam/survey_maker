@@ -1,0 +1,18 @@
+#muskox {
+  margin-top: 7px;
+  margin-left: -60px;
+}
+
+h3,h5 {
+  font-weight: 300;
+  font-style: italic;
+}
+
+.frame {
+  margin-top: 40px;
+  padding: 40px;
+}
+
+#q2, #q3 {
+  display: none;
+}
